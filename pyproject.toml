@@ -40,3 +40,5 @@ packages = ["src/pyenergiedock"]
 
 [project.urls]
 Homepage = "https://energiedock.de"
+Repository = "https://github.com/EnergieDock/pyEnergieDock"
+Issues = "https://github.com/EnergieDock/pyEnergieDock/issues"
