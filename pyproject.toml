@@ -1,0 +1,42 @@
+[build-system]
+requires = ["hatchling >= 1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pyEnergieDock"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+version = "0.0.3"
+authors = [
+  { name = "Julian Schmikale", email = "dev@energiedock.de" }
+]
+description = "A python library for communicating asynchronously with the EnergieDock API."
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Intended Audience :: Developers",
+  "Topic :: Home Automation",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "Operating System :: OS Independent",
+]
+dependencies = [
+  "aiohttp>=3.9",
+]
+
+[project.optional-dependencies]
+test = ["pytest==9.1.1"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.hatch.build]
+exclude = ["/pypi_test.py"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pyenergiedock"]
+
+[project.urls]
+Homepage = "https://energiedock.de"
