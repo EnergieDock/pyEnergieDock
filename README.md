@@ -1,7 +1,7 @@
 # pyEnergieDock
 
-[![Version](https://img.shields.io/badge/dynamic/json?url=https:%2F%2Ftest.pypi.org%2Fpypi%2FpyEnergieDock%2Fjson&query=$.info.version&label=Test.PyPi%20Package&color=teal)](https://test.pypi.org/project/pyEnergieDock/)
-[![License](https://img.shields.io/badge/dynamic/json?url=https:%2F%2Ftest.pypi.org%2Fpypi%2FpyEnergieDock%2Fjson&query=$.info.license_expression&label=License&color=green)](https://test.pypi.org/project/pyEnergieDock/)
+[![Version](https://img.shields.io/badge/dynamic/json?url=https:%2F%2Fpypi.org%2Fpypi%2FpyEnergieDock%2Fjson&query=$.info.version&label=PyPi%20Package&color=teal)](https://pypi.org/project/pyEnergieDock/)
+[![License](https://img.shields.io/badge/dynamic/json?url=https:%2F%2Fpypi.org%2Fpypi%2FpyEnergieDock%2Fjson&query=$.info.license_expression&label=License&color=green)](https://pypi.org/project/pyEnergieDock/)
 
 An asynchronous Python client for the EnergieDock API. It is intended as a
 small API layer for applications and integrations such as Home Assistant.
@@ -9,10 +9,8 @@ small API layer for applications and integrations such as Home Assistant.
 ## Install
 
 ```shell
-pip install -i https://test.pypi.org/simple/ pyEnergieDock
+pip install pyEnergieDock
 ```
-
-The package is not currently published on PyPI, so `pip install pyEnergieDock` is not available yet.
 
 ## Usage
 
@@ -31,7 +29,7 @@ async def main() -> None:
         username="<username>",
         password="<password>",
         session=ClientSession(),
-        api_name="ED",
+        api_name="WWS",
     ) as client:
         prices = await client.async_get_latest_prices()
         measurements = await client.async_get_latest_measurements()
