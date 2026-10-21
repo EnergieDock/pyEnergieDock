@@ -6,9 +6,9 @@ build-backend = "hatchling.build"
 name = "pyEnergieDock"
 license = "Apache-2.0"
 license-files = ["LICENSE"]
-version = "0.0.3"
+version = "0.1.0"
 authors = [
-  { name = "Julian Schmikale", email = "dev@energiedock.de" }
+  { name = "Julian Schmikale", email = "julian.schmikale@energiedock.de" }
 ]
 description = "A python library for communicating asynchronously with the EnergieDock API."
 readme = "README.md"
