@@ -157,7 +157,7 @@ class DynamiT:
         data = await self._get_authenticated_json(
             "/energyprices",
             params={
-                "page_size": 100,
+                "page_size": 192,
                 "sort": "valid_from:desc",
             },
         )

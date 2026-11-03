@@ -46,8 +46,7 @@ asyncio.run(main())
   when needed.
 - `async_refresh_login()` refreshes the access token, or logs in if no refresh token
   is available.
-- `async_get_latest_prices()` returns today's tariff periods as a list of
-  dictionaries, including the final 15-minute interval from the previous day, using the `Europe/Berlin` aggregation timezone.
+- `async_get_latest_prices()` returns today's tariff periods as a list of dictionaries, including the previous or next day, depending on the publication time (around 14:00 UTC), using the `Europe/Berlin` aggregation timezone.
 - `async_get_latest_measurements()` requests quarter-hour data for the last
   24 hours and 15 minutes, using the `Europe/Berlin` aggregation timezone.
 - `close()` closes only a session created by this client.
