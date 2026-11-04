@@ -3,7 +3,9 @@
 from datetime import datetime, timedelta, timezone
 from typing import Any
 from urllib.parse import urljoin
-from aiohttp import ClientError, ClientSession, ClientTimeout 
+
+from aiohttp import ClientError, ClientSession, ClientTimeout
+
 from .const import BASE_URL, WWS_BASE_URL
 from .exceptions import EdAPIError, EdAuthError
 
@@ -169,7 +171,7 @@ class DynamiT:
     async def async_get_latest_measurements(self) -> list[dict[str, Any]]:
         """Return the latest quarter-hour measurements for the logged-in user."""
         end = datetime.now(timezone.utc)
-        start = end - timedelta(days=1, minutes=15)
+        start = end - timedelta(days=1, hours=1, minutes=15)
         data = await self._get_authenticated_json(
             "/measurements/",
             params={

@@ -20,20 +20,17 @@ Optional: Pass your Home Assistant Client Session with the `session` parameter*.
 
 ```python
 import asyncio
-
 from pyenergiedock import DynamiT
 
-
 async def main() -> None:
-    async with DynamiT(
-        username="<username>",
-        password="<password>",
-        session=ClientSession(),
-        api_name="WWS",
-    ) as client:
-        prices = await client.async_get_latest_prices()
-        measurements = await client.async_get_latest_measurements()
-
+  async with DynamiT(
+    username="<username>",
+    password="<password>",
+    session=ClientSession(),
+    api_name="WWS",
+  ) as client:
+    prices = await client.async_get_latest_prices()
+    measurements = await client.async_get_latest_measurements()
 
 asyncio.run(main())
 ```
@@ -48,5 +45,5 @@ asyncio.run(main())
   is available.
 - `async_get_latest_prices()` returns today's tariff periods as a list of dictionaries, including the previous or next day, depending on the publication time (around 14:00 UTC), using the `Europe/Berlin` aggregation timezone.
 - `async_get_latest_measurements()` requests quarter-hour data for the last
-  24 hours and 15 minutes, using the `Europe/Berlin` aggregation timezone.
+  25 hours and 15 minutes, using the `Europe/Berlin` aggregation timezone.
 - `close()` closes only a session created by this client.
