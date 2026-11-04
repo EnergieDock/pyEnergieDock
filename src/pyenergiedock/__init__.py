@@ -3,12 +3,12 @@
 from .client import DynamiT
 from .exceptions import EdAPIError, EdAuthError, EdError
 
-__version__ = "0.2.0"
+__version__ = "0.2.1"
 
 __all__ = [
-    "EdError",
-    "EdAuthError",
-    "EdAPIError",
     "DynamiT",
+    "EdAPIError",
+    "EdAuthError",
+    "EdError",
     "__version__",
 ]
